@@ -37,7 +37,7 @@ public class GlobalErrorHandler {
   
   @ExceptionHandler(ConstraintViolationException.class)
   @ResponseStatus(code = HttpStatus.BAD_REQUEST)
-  public Map<String, Object> handleContraintViolationException(
+  public Map<String, Object> handleConstraintViolationException(
       ConstraintViolationException e, WebRequest webRequest )   {
     return createExceptionMessage(e, HttpStatus.BAD_REQUEST, webRequest, LogStatus.MESSAGE_ONLY);
   
